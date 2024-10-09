@@ -1,8 +1,12 @@
 import express from "express";
+import { cuisinesRouter } from "@cuisines";
+import { restaurantsRouter } from "@restaurants";
 
 const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.json());
+app.use("/cuisines", cuisinesRouter);
+app.use("/restaurants", restaurantsRouter);
 
 app
   .listen(PORT, () => {
