@@ -1,1 +1,13 @@
-console.log("Hello via Bun!");
+import express from "express";
+
+const PORT = process.env.PORT || 3000;
+const app = express();
+app.use(express.json());
+
+app
+  .listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`);
+  })
+  .on("error", (error) => {
+    throw new Error(error.message);
+  });
