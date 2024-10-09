@@ -27,8 +27,9 @@
     // Path aliasing
     "baseUrl": "./",
     "paths": {
-      "@cuisines": ["features/cuisines/index.ts"],
-      "@restaurants": ["features/restaurants/index.ts"]
+      "@features/*": ["features/*/index.ts"],
+      "@middlewares": ["middlewares/index.ts"],
+      "@utils": ["utils/index.ts"],
     }
   }
 }
